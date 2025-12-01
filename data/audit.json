@@ -1,0 +1,28 @@
+[
+  {
+    "ts": 1764619234.728472,
+    "action": "scale",
+    "service": "order-consumer",
+    "new_count": 3,
+    "status": "SUCCESS"
+  },
+  {
+    "ts": 1764619240.212875,
+    "action": "restart",
+    "service": "order-consumer",
+    "status": "SUCCESS"
+  },
+  {
+    "ts": 1764619274.032137,
+    "action": "restart",
+    "service": "order-consumer",
+    "status": "SUCCESS"
+  },
+  {
+    "ts": 1764621208.879204,
+    "action": "scale",
+    "service": "order-consumer",
+    "new_count": 3,
+    "status": "SUCCESS"
+  }
+]

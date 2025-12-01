@@ -1,1 +1,1 @@
-{"timestamp": "2025-12-01T19:29:16.717461", "metrics": {"latency_p95": 99.09910755613042, "error_rate": 0.07039168807460028, "kafka_consumer_lag": 94}, "logs": [{"timestamp": "2025-12-01T19:29:16.717461", "service": "order-consumer", "severity": "INFO", "message": "Processed batch ok"}]}
+{"timestamp": "2025-12-01T20:06:01.116197", "metrics": {"latency_p95": 98.07295839953186, "error_rate": 0.48189209659221505, "kafka_consumer_lag": 100}, "logs": [{"timestamp": "2025-12-01T20:06:01.116197", "service": "order-consumer", "severity": "INFO", "message": "Processed batch ok"}]}
