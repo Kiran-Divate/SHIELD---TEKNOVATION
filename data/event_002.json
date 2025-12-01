@@ -1,0 +1,1 @@
+{"timestamp": "2025-12-01T19:23:16.717461", "metrics": {"latency_p95": 101.65738901869577, "error_rate": 0.05167035961421412, "kafka_consumer_lag": 94}, "logs": [{"timestamp": "2025-12-01T19:23:16.717461", "service": "order-consumer", "severity": "INFO", "message": "Processed batch ok"}]}

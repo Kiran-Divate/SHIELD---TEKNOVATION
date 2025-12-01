@@ -1,0 +1,30 @@
+<!-- service/templates/dashboard.html -->
+<!doctype html>
+<html>
+  <head>
+    <title>SentinelAI — Dashboard</title>
+  </head>
+  <body>
+    <h2>SentinelAI — Latest Snapshot</h2>
+    <pre id="metrics">{{ latest }}</pre>
+
+    <button onclick="analyze()">Request RCA</button>
+    <div id="rca"></div>
+
+    <script>
+      async function analyze(){
+        const resp = await fetch('/analyze', {method: 'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({})});
+        const j = await resp.json();
+        document.getElementById('rca').innerHTML = `<h3>RCA</h3><pre>${JSON.stringify(j, null, 2)}</pre>
+          <button onclick='remediate("scale",3)'>Approve: Scale to 3</button>
+          <button onclick='remediate("restart")'>Approve: Restart</button>
+          `;
+      }
+      async function remediate(action, new_count=null){
+        const resp = await fetch('/remediate', {method:'POST',headers:{'Content-Type':'application/json'}, body: JSON.stringify({action:action, new_count:new_count})});
+        const j = await resp.json();
+        alert("Remediation result: " + JSON.stringify(j));
+      }
+    </script>
+  </body>
+</html>
